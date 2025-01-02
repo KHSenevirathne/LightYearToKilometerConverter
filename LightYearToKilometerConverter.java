@@ -20,7 +20,7 @@ public class LightYearToKilometerConverter {
         frame.add(inputField);
 
         // Create output label
-        JLabel outputLabel = new JLabel("Equivalent Distance (Million Km):");
+        JLabel outputLabel = new JLabel("Equivalent Distance (Trillion Km):");
         outputLabel.setBounds(20, 60, 300, 25);
         frame.add(outputLabel);
 
@@ -41,10 +41,10 @@ public class LightYearToKilometerConverter {
                     double kilometers = lightYears * 9.461e12;
 
                     // Convert to millions of kilometers
-                    double millionKilometers = kilometers / 1e6;
+                    double trillionKilometers = kilometers / 1e12;
 
                     // Display the result
-                    outputLabel.setText("Equivalent Distance (Million Km): " + millionKilometers + " M km");
+                    outputLabel.setText("Equivalent Distance (Trillion Km): " + trillionKilometers + " T km");
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(frame, "Please enter a valid number!", "Error", JOptionPane.ERROR_MESSAGE);
                 }
